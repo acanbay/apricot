@@ -1,7 +1,6 @@
 # APRICOT 
 >**Particle Tracking Module** for python
 
-
 APRICOT is a python module that simulates the behavior of particle beams in electromagnetic fields as they pass through various beamline elements and calculates beamline parameters at the end of the beamline.
 
 The module needs **numpy** (vector analysis), **matplotlib** (visualization) and **scipy** (small interval calculation) modules to work.
@@ -27,7 +26,7 @@ Creating beam with parameters below:
 ```
 
 ### 1.1. Random Beam
-Random beam generation is provided by the **RandomBeam** function in the Functions library. Here is the usage of the parameters required by the RandomBeam function:
+Random beam generation is provided by the **RandomBeam** method in the **Functions** module. Here is the usage of the parameters required by the RandomBeam (in **Outputs** module):
 
 ```py
 ParticleTpye        # 'electron', 'proton' or 'muon'
@@ -58,17 +57,17 @@ Temperature         # Cathode temperature (C)
 Voltage             # Gun voltage (V)
 ```
 
-Then the egun is created with the ElectronGun class in the Gun library:
+Then the egun is created with the **ElectronGun** class in the **Gun** module:
 ```py
 egun = ElectronGun(r_Cathode, Temperature, Voltage)
 ```
 
-Finally, the egun's GenerateBeam function is called.
+Finally, the egun's GenerateBeam method is called.
 ```py
 egun.GenerateBeam(NumberOfParticles)
 ```
 
-The function will return the generated beam object as return value.
+The method will return the generated beam object as return value.
 
 ## 2. Beamline Elements
 APRICOT currently has **Drift Tube**, **Quadrupole Magnet**, **Dipole Magnet** and **Solenoid** beamline components. In addition to these, it also allows the production of **lattice**.
@@ -81,7 +80,7 @@ Name    # Name of the element
 Length  # Length of the element
 ```
 
-Drift Tube object is created from the DriftTube class in the BeamLineComponent library as follows:
+Drift Tube object is created from the **DriftTube** class in the **BeamLineComponent** module as follows:
 ```py
 DriftTube(Name, Length)
 ```
@@ -95,7 +94,7 @@ Length    # Length of the element
 Strength  # Strength of the element
 ```
 
-Quadrupole Magnet object is created from the QuadrupoleMagnet class in the BeamLineComponent library as follows:
+Quadrupole Magnet object is created from the **QuadrupoleMagnet** class in the **BeamLineComponent** module as follows:
 ```py
 QuadrupoleMagnet(Name, Length, Strength)
 ```
@@ -110,7 +109,7 @@ Angle     # Angle expected to bend
 ybend     # Enter 1 to bend in the y-axis (not mandatory)
 ```
 
-Quadrupole Magnet object is created from the DipoleMagnet class in the BeamLineComponent library as follows:
+Quadrupole Magnet object is created from the **DipoleMagnet** class in the **BeamLineComponent** module as follows:
 ```py
 DipoleMagnet(Name, Length, Angle, ybend)
 ```
@@ -124,7 +123,7 @@ Length    # Length of the element
 Strength  # Strength of the element
 ```
 
-Solenoid object is created from the Solenoid class in the BeamLineComponent library as follows:
+Solenoid object is created from the **Solenoid** class in the **BeamLineComponent** module as follows:
 ```py
 Solenoid(Name, Length, Strength)
 ```
@@ -137,12 +136,12 @@ Name      # Name of the element
 Elements  # Elements in beamline (in list form, in brackets)
 ```
 
-The beamline object is generated from the BeamLine class of the BeamLine library as follows:
+The beamline object is generated from the **BeamLine** class of the **BeamLine** module as follows:
 ```py
 Beamline(Name, Elements)
 ```
 
-To pass the beam in the beamline, the TransportBeam function from the Functions library is used (assume that BeamLine object is named as beamline).
+To pass the beam in the beamline, the **TransportBeam** method from the **Functios** module is used (assume that BeamLine object is named as beamline).
 ```py
 TransportBeam( Beam, beamline.Elements )
 ```
@@ -163,7 +162,7 @@ QuadrupoleMagnetLength    # Length of the quadrupole magnets
 QuadrupoleMagnetStrength  # Strength of the quadrupole magnets
 ```
 
-The FODO object is generated from the FODO class of the BeamLine library as follows:
+The FODO object is generated from the **FODO** class of the **BeamLine** module as follows:
 ```py
 Beamline(Name, DriftLength, QuadrupoleMagnetLength, QuadrupoleMagnetStrength)
 ```
@@ -173,7 +172,7 @@ Beamline(Name, DriftLength, QuadrupoleMagnetLength, QuadrupoleMagnetStrength)
 Outputs library is used for outputs. 
 
 ### 4.1. Beam Graphs
-The beam graphs can be stored with the getBeam function. getBeam needs the following parameters:
+The beam graphs can be stored with the **getBeam** method (in **Outputs** module). getBeam needs the following parameters:
 
 ```py
 Beam   # Beam object
@@ -182,7 +181,7 @@ tag    # Name tag (not mandatory)
 ```
 The default value for **path** is the file path of the script.
 
-By using the getBeam function as below, beam shape and phase space graphs are created. The Beam Position graph gives the beam's length in the x and y axes relative to the z axis (not rms).
+By using the getBeam method as below, beam shape and phase space graphs are created. The Beam Position graph gives the beam's length in the x and y axes relative to the z axis (not rms).
 ```py
 getBeam(Beam, path, tag)
 ```
@@ -192,7 +191,7 @@ getBeam(Beam, path, tag)
 
 
 ### 4.1. Position Graphs
-The position graphs can be stored with the getBeamPositions function. getBeamPositions needs the following parameters:
+The position graphs can be stored with the **getBeamPositions** method (in **Outputs** module). getBeamPositions needs the following parameters:
 
 ```py
 Beam                # Beam object
@@ -202,7 +201,7 @@ tag                 # Name tag (not mandatory)
 ```
 The default value for **path** is the file path of the script.
 
-By using the getBeamPositions function as below, beam position and beta function graphs are created.
+By using the getBeamPositions method as below, beam position and beta function graphs are created.
 ```py
 getBeamPositions(Beam, beamline.Elements, path, tag)
 ```
