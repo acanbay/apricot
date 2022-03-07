@@ -181,7 +181,7 @@ tag    # Name tag (not mandatory)
 ```
 The default value for **path** is the file path of the script.
 
-By using the getBeam function as below, beam shape and phase space graphs are created.
+By using the getBeam function as below, beam shape and phase space graphs are created. The Beam Position graph gives the beam's length in the x and y axes relative to the z axis (not rms).
 ```py
 getBeam(Beam, path, tag)
 ```
@@ -210,4 +210,14 @@ getBeamPositions(Beam, beamline.Elements, path, tag)
 
 <img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BeamPosition.png" width="300">  <img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BetaFunction.png" width="300">
 
-getBeamPositions function is also create beam parameters output on terminal.
+getBeamPositions function prints an output with the final state beam parameters as follows:
+```
+Beam parameters in the final state:
+        
+    sigma_x (mm)            : 2.870e-06
+    sigma_y (mm)            : 3.008e-06
+    Emittance x (mrad)      : 7.208e-10
+    Emittance y (mrad)      : 1.170e-09
+    beta_x                  : 1.143e+01
+    beta_y                  : 7.730e+00
+```
