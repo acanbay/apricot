@@ -208,6 +208,6 @@ getBeamPositions(Beam, beamline.Elements, path, tag)
 
 **Examples:**
 
-<img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BeamPosition.png" width="400">  <img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BetaFunction.png" width="400">
+<img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BeamPosition.png" width="300">  <img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BetaFunction.png" width="300">
 
 getBeamPositions function is also create beam parameters output on terminal.
