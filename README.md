@@ -54,4 +54,103 @@ egun.GenerateBeam(NumberOfParticles)
 The function will return the generated beam object as return value.
 
 ## 2. Beamline Elements
+APRICOT currently has **Drift Tube**, **Quadrupole Magnet**, **Dipole Magnet** and **Solenoid** beamline components. In addition to these, it also allows the production of **lattice**.
+
 ### 2.1. Drift Tube
+The following parameters are used to create Drift Tube:
+
+```py
+Name    # Name of the element
+Length  # Length of the element
+```
+
+Drift Tube object is created from the DriftTube class in the BeamLineComponent library as follows:
+```py
+DriftTube(Name, Length)
+```
+
+### 2.2. Quadrupole Magnet
+The following parameters are used to create Quadrupole Magnet:
+
+```py
+Name      # Name of the element
+Length    # Length of the element
+Strength  # Strength of the element
+```
+
+Quadrupole Magnet object is created from the QuadrupoleMagnet class in the BeamLineComponent library as follows:
+```py
+QuadrupoleMagnet(Name, Length, Strength)
+```
+
+### 2.3. Dipole Magnet
+The following parameters are used to create Quadrupole Magnet:
+
+```py
+Name      # Name of the element
+Length    # Length of the element
+Angle     # Angle expected to bend
+ybend     # Enter 1 to bend in the y-axis (not mandatory)
+```
+
+Quadrupole Magnet object is created from the DipoleMagnet class in the BeamLineComponent library as follows:
+```py
+DipoleMagnet(Name, Length, Angle, ybend)
+```
+
+### 2.4. Solenoid
+The following parameters are used to create Solenoid:
+
+```py
+Name      # Name of the element
+Length    # Length of the element
+Strength  # Strength of the element
+```
+
+Solenoid object is created from the Solenoid class in the BeamLineComponent library as follows:
+```py
+Solenoid(Name, Length, Strength)
+```
+
+## 3. Beamline
+After the beamline components are defined, the beamline must be aligned. The following parameters are used to create beamline:
+
+```py
+Name      # Name of the element
+Elements  # Elements in beamline (in list form, in brackets)
+```
+
+The beamline object is generated from the BeamLine class of the BeamLine library as follows:
+```py
+Beamline(Name, Elements)
+```
+
+To pass the beam in the beamline, the TransportBeam function from the Functions library is used.
+```py
+TransportBeam( Beam, beamline.Elements )
+```
+This proceeds by specifying the parameters of the beam at the end of each element. If the behavior inside the elements is also to be calculated, the step size (m) for the z-axis must be determined in the code.
+
+```py
+TransportBeam( Beam, beamline.Elements, dz )
+```
+**!** The step length must be the exact divisor of the element lengths **!**
+### 3.1. FODO Lattice
+The following parameters are needed to create a FODO lattice:
+
+```py
+Name                      # Name of the element
+DriftLength               # Length of the drift tubes
+QuadrupoleMagnetLength    # Length of the quadrupole magnets
+QuadrupoleMagnetStrength  # Strength of the quadrupole magnets
+```
+
+The FODO object is generated from the FODO class of the BeamLine library as follows:
+```py
+Beamline(Name, DriftLength, QuadrupoleMagnetLength, QuadrupoleMagnetStrength)
+```
+**If step size is used for FODO:** step size should be the exact divisor of half of the quadrupole magnet length and the drift tube length.
+
+## 4. Outputs
+
+
