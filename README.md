@@ -142,7 +142,7 @@ The beamline object is generated from the BeamLine class of the BeamLine library
 Beamline(Name, Elements)
 ```
 
-To pass the beam in the beamline, the TransportBeam function from the Functions library is used.
+To pass the beam in the beamline, the TransportBeam function from the Functions library is used (assume that BeamLine object is named as beamline).
 ```py
 TransportBeam( Beam, beamline.Elements )
 ```
@@ -151,7 +151,8 @@ This proceeds by specifying the parameters of the beam at the end of each elemen
 ```py
 TransportBeam( Beam, beamline.Elements, dz )
 ```
-**!** The step length must be the exact divisor of the element lengths **!**
+**! The step length must be the exact divisor of the element lengths.** It is recommended that the minimum value of step length should be in millimeters (it can be taken down to 10 microns).
+
 ### 3.1. FODO Lattice
 The following parameters are needed to create a FODO lattice:
 
