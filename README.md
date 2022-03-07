@@ -152,5 +152,25 @@ Beamline(Name, DriftLength, QuadrupoleMagnetLength, QuadrupoleMagnetStrength)
 **If step size is used for FODO:** step size should be the exact divisor of half of the quadrupole magnet length and the drift tube length.
 
 ## 4. Outputs
+Outputs library is used for outputs.
+
+### 4.1. Beam Graphs
+The beam graphs can be stored with the getBeam function. getBeam needs the following parameters:
+
+```py
+Beam   # Beam object
+path   # File path to save graphics (not mandatory)
+tag    # name tag (not mandatory)
+```
+The default value for **path** is the file path of the script.
+
+By using the getBeam function as below, beam shape and phase space graphs are created.
+```py
+getBeam(Beam, path, tag)
+```
+**Examples:**
+
+![alt text](https://github.com/lcnby/apricot/blob/main/output_samples/Initial_BeamShape_xy.png) ![alt text](https://github.com/lcnby/apricot/blob/main/output_samples/Initial_PhaseSpace.png)
 
 
+### 4.1. Position Graphs
