@@ -13,19 +13,21 @@ APRICOT has two different beam generation methods: random beam generator and ele
 Random beam generation is provided by the **RandomBeam** function in the Functions library. Here is the usage of the parameters required by the RandomBeam function:
 
 ```py
-ParticleTpye = "electron"   # particle type
-NumberOfParticles = 10000   # Number of particles
-BeamEnergy = 250e3          # beam energy (keV)
-x_rms = 0.003               # RMS beam size of x (m)  
-y_rms = 0.003               # RMS beam size of y (m) 
-Emittance_x = 1e-6          # emittance x (mrad)
-Emittance_y = 1e-6          # emittance y (mrad)
-Alpha_x = -0.50             # alpha x
-Alpha_y = -0.50             # alpha y
+ParticleTpye        # 'electron', 'proton' or 'muon'
+NumberOfParticles   # Number of particles
+BeamEnergy          # Beam energy (keV)
+x_rms               # RMS beam size of x (m)  
+y_rms               # RMS beam size of y (m) 
+z_rms               # RMS beam size of y (m) (not mandatory)
+Emittance_x         # Emittance x (mrad)
+Emittance_y         # Emittance y (mrad)
+Alpha_x             # Alpha x
+Alpha_y             # Alpha y
+dE                  # Energy Spread (not mandatory)
 ```
 After these parameters are determined, random beam generation is provided as follows. 
 ```py 
-RandomBeam( ParticleTpye, NumberOfParticles, BeamEnergy, x_rms, y_rms, Emittance_x, Emittance_y, Alpha_x, Alpha_y  )
+RandomBeam(ParticleTpye, NumberOfParticles, BeamEnergy, x_rms, y_rms, Emittance_x, Emittance_y, Alpha_x, Alpha_y, z_rms, dE)
 ```
 
 The function will return the generated beam object as return value.
@@ -33,10 +35,10 @@ The function will return the generated beam object as return value.
 ### 1.2. Electron Gun
 For beam generation with the electron gun, the necessary parameters should be defined as follows:
 ```py
-NumberOfParticles = 10000   # Number of particles
-r_Cathode = 0.05            # Cathode radius (m)
-Temperature = 4000          # Cathode temperature (C)
-Voltage = 10                # Gun voltage (V)
+NumberOfParticles   # Number of particles
+r_Cathode           # Cathode radius (m)
+Temperature         # Cathode temperature (C)
+Voltage             # Gun voltage (V)
 ```
 
 Then the egun is created with the ElectronGun class in the Gun library:
