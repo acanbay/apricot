@@ -9,6 +9,23 @@ The module needs **numpy** (vector analysis), **matplotlib** (visualization) and
 ## 1. Beam Generation
 APRICOT has two different beam generation methods: random beam generator and electron gun beam generator.
 
+In both methods, before the beam generation, the information text of the parameters is printed on the terminal screen as follows.
+```
+Creating beam with parameters below:
+        
+    Particle Type           : electron
+    Number of Particles     : 100000
+    Beam Energy (KeV)       : 2.500e+02
+    sigma_x (mm)            : 3.000e-06
+    sigma_y (mm)            : 3.000e-06
+    sigma_z (mm)            : 1.000e-06
+    Emittance x (mrad)      : 7.200e-10
+    Emittance y (mrad)      : 1.171e-09
+    alpha_x                 : 1.169e-16
+    alpha_y                 : -1.169e-16
+    %Energy Spread          : 0.000e+00
+```
+
 ### 1.1. Random Beam
 Random beam generation is provided by the **RandomBeam** function in the Functions library. Here is the usage of the parameters required by the RandomBeam function:
 
@@ -152,7 +169,7 @@ Beamline(Name, DriftLength, QuadrupoleMagnetLength, QuadrupoleMagnetStrength)
 **If step size is used for FODO:** step size should be the exact divisor of half of the quadrupole magnet length and the drift tube length.
 
 ## 4. Outputs
-Outputs library is used for outputs.
+Outputs library is used for outputs. 
 
 ### 4.1. Beam Graphs
 The beam graphs can be stored with the getBeam function. getBeam needs the following parameters:
@@ -160,7 +177,7 @@ The beam graphs can be stored with the getBeam function. getBeam needs the follo
 ```py
 Beam   # Beam object
 path   # File path to save graphics (not mandatory)
-tag    # name tag (not mandatory)
+tag    # Name tag (not mandatory)
 ```
 The default value for **path** is the file path of the script.
 
@@ -170,7 +187,27 @@ getBeam(Beam, path, tag)
 ```
 **Examples:**
 
-![alt text](https://github.com/lcnby/apricot/blob/main/output_samples/Initial_BeamShape_xy.png) ![alt text](https://github.com/lcnby/apricot/blob/main/output_samples/Initial_PhaseSpace.png)
+<img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BeamShape_xy.png" width="300">  <img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_PhaseSpace.png" width="300">
 
 
 ### 4.1. Position Graphs
+The position graphs can be stored with the getBeamPositions function. getBeamPositions needs the following parameters:
+
+```py
+Beam                # Beam object
+beamline.Elements   # Elements of beamline object
+path                # File path to save graphics (not mandatory)
+tag                 # Name tag (not mandatory)
+```
+The default value for **path** is the file path of the script.
+
+By using the getBeamPositions function as below, beam position and beta function graphs are created.
+```py
+getBeamPositions(Beam, beamline.Elements, path, tag)
+```
+
+**Examples:**
+
+<img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BeamPosition.png" width="400">  <img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BetaFunction.png" width="400">
+
+getBeamPositions function is also create beam parameters output on terminal.
