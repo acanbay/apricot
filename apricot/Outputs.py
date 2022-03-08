@@ -27,6 +27,7 @@ def getBeamPositions( beam, beamline=None, path=None, tag=None ):
     print("'{}' Position Graphs are being saved...\n".format(tag))
 
     gp.PositionGraph( beam, beamline, path, tag )
+    gp.PositionGraph_RMSsize( beam, beamline, path, tag )
     gp.BetaFunctions( beam, beamline, path, tag )
 
     x = np.copy( beam.BeamMatrix[0,:] )
