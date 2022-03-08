@@ -224,7 +224,7 @@ def PositionGraph( Beam, beamline, path=None, tag=None ):
 
     x =  Beam.BeamPositions[:,0]* 1e3
     y =  Beam.BeamPositions[:,1]* 1e3
-    z =  Beam.BeamPositions[:,2]
+    z =  Beam.BeamPositions[:,2]        
     
     x_max = np.max( x, 1 )
     x_min = np.min( x, 1 )
@@ -308,6 +308,99 @@ def PositionGraph( Beam, beamline, path=None, tag=None ):
         plt.savefig(path+'/BeamPosition.png',dpi=200)
     else: 
         plt.savefig(path+"/"+tag+"_BeamPosition",dpi=200)
+    plt.close()
+
+def PositionGraph_RMSsize( Beam, beamline, path=None, tag=None ):
+    if path==None:
+        path="."
+
+    x =  Beam.BeamPositions[:,0]* 1e3
+    y =  Beam.BeamPositions[:,1]* 1e3
+    z =  Beam.BeamPositions[:,2]
+
+    x_rms = []
+    y_rms = []
+    for i in range(len(x)):
+        x_rms.append(st.myrms(x[i]))
+        y_rms.append(st.myrms(y[i]))
+    
+    x_rms=np.array(x_rms)
+    y_rms=np.array(y_rms)
+    
+    mean_z = np.mean( z, 1 )
+    
+    z_max=0
+    for component in beamline:
+        z_max+=component.Length
+
+    DriftTube_color=(0, 0, 1, 0.1)
+    QuadrupoleMagnet_color=(1, 0, 0, 0.1)
+    DipoleMagnet_color=(0, 1, 0, 0.1)
+    Solenoid_color=(1, 0.5, 0, 0.1)
+    
+    plt.subplot(2,1,1)
+    Position=0
+    for component in beamline:
+        min_ = Position
+        max_ = Position + component.Length
+        Position = max_
+        if component.Type=="DriftTube":
+            plt.axvspan(min_, max_, color=DriftTube_color)
+        elif component.Type=="QuadrupoleMagnet":
+            plt.axvspan(min_, max_, color=QuadrupoleMagnet_color)
+        elif component.Type=="DipoleMagnet":
+            plt.axvspan(min_, max_, color=DipoleMagnet_color)
+        elif component.Type=="Solenoid":
+            plt.axvspan(min_, max_, color=Solenoid_color)
+
+    plt.plot( mean_z, x_rms, "b", label="$\sigma_{rms,x}$" )
+    plt.plot( mean_z, y_rms, "r", label="$\sigma_{rms,y}$" )
+    plt.xlabel( 'z (m)' )
+    plt.ylabel( '$\sigma_{rms,x}$, $\sigma_{rms,y}$ (mm)' )
+    plt.xlim(0,mean_z[-1])
+    plt.legend( loc="best", fontsize=8, facecolor="None", edgecolor="None" )
+
+    min_ = min([x_rms.min(),y_rms.min()])
+    min_=min_-min_*0.02
+    plt.text( 0, min_, r'APRICOT',fontsize = 10, fontstyle="oblique", weight='bold', alpha=0.44 )
+
+    plt.subplot(2,1,2)
+    plt.axis( 'off' )
+
+    N_Components=[0,0,0,0]
+    Component_Name=[]
+    Component_Color=[]
+    for component in beamline:
+        if component.Type=="DriftTube":
+            N_Components[0]+=1
+        elif component.Type=="QuadrupoleMagnet":
+            N_Components[1]+=1   
+        elif component.Type=="DipoleMagnet":
+            N_Components[2]+=1
+        elif component.Type=="Solenoid":
+            N_Components[3]+=1
+
+    Component_Name=["Drift Tube","Quadrupole Magnet","Dipole Magnet","Solenoid"]
+    Component_Color=[DriftTube_color,QuadrupoleMagnet_color,DipoleMagnet_color,Solenoid_color]
+    
+    x_position=0.33
+    y_position=0.79
+    y_diff=0.11
+    for i in range(len(N_Components)):
+        if N_Components[i]>0:
+            rectangle = plt.Rectangle((x_position,y_position), 0.1, 0.1, fc=(Component_Color[i]),ec="black")
+            plt.gca().add_patch(rectangle)
+            plt.text( x_position+0.04, y_position+0.02, r'{}'.format(N_Components[i]), fontsize = 9 )
+            plt.text( x_position+0.11, y_position+0.02, Component_Name[i], fontsize = 9 )
+            plt.gca()
+            y_position-=y_diff
+        
+    plt.tight_layout()
+    #plt.show()
+    if tag == None:
+        plt.savefig(path+'/BeamPositionRMSsize.png',dpi=200)
+    else: 
+        plt.savefig(path+"/"+tag+"_BeamPositionRMSsize",dpi=200)
     plt.close()
     
 def BetaFunctions( Beam, beamline, path=None, tag=None ):
