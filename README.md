@@ -207,7 +207,7 @@ getBeamPositions(Beam, beamline.Elements, path, tag)
 
 **Examples:**  7th example
 
-<img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BeamPosition.png" width="300"><img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BeamPositionRMSsize.png" width="300"><img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BetaFunction.png" width="300">
+<img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BeamPosition.png" width="300"> <img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BeamPositionRMSsize.png" width="300">  <img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BetaFunction.png" width="300">
 
 getBeamPositions function prints an output with the final state beam parameters as follows:
 ```
