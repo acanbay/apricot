@@ -185,10 +185,9 @@ By using the getBeam method as below, beam shape and phase space graphs are crea
 ```py
 getBeam(Beam, path, tag)
 ```
-**Examples:**
+**Examples:** 7th example
 
 <img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BeamShape_xy.png" width="300">  <img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_PhaseSpace.png" width="300">
-
 
 ### 4.1. Position Graphs
 The position graphs can be stored with the **getBeamPositions** method (in **Outputs** module). getBeamPositions needs the following parameters:
@@ -206,9 +205,9 @@ By using the getBeamPositions method as below, beam position and beta function g
 getBeamPositions(Beam, beamline.Elements, path, tag)
 ```
 
-**Examples:**
+**Examples:**  7th example
 
-<img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BeamPosition.png" width="300">  <img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BetaFunction.png" width="300">
+<img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BeamPosition.png" width="300"><img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BeamPositionRMSsize.png" width="300"><img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BetaFunction.png" width="300">
 
 getBeamPositions function prints an output with the final state beam parameters as follows:
 ```
