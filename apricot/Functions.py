@@ -43,13 +43,13 @@ def RandomBeam( ParticleTpye, NumberOfParticles, BeamEnergy, x_rms, y_rms, Emitt
     Particle Type           : {}
     Number of Particles     : {}
     Beam Energy (KeV)       : {:.3e}
-    sigma_x (mm)            : {:.3e}
-    sigma_y (mm)            : {:.3e}
-    sigma_z (mm)            : {:.3e}
+    RMS x size (mm)         : {:.3e}
+    RMS y size (mm)         : {:.3e}
+    RMS z size (mm)         : {:.3e}
     Emittance x (mrad)      : {:.3e}
     Emittance y (mrad)      : {:.3e}
-    alpha_x                 : {:.3e}
-    alpha_y                 : {:.3e}
+    Alpha x                 : {:.3e}
+    Alpha y                 : {:.3e}
     %Energy Spread          : {:.3e}\n""".format(ParticleTpye,NumberOfParticles,BeamEnergy*1e-3,x_rms*1e-3,y_rms*1e-3,z_rms*1e-3,Emittance_x*1e-3,Emittance_y*1e-3,Alpha_x, Alpha_y,dE))
     time.sleep(2)
 
