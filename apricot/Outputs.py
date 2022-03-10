@@ -54,10 +54,10 @@ def getBeamPositions( beam, beamline=None, path=None, tag=None ):
 
     print("""\nBeam parameters in the final state:
         
-    sigma_x (mm)            : {:.3e}
-    sigma_y (mm)            : {:.3e}
+    RMS x size (mm)         : {:.3e}
+    RMS y size (mm)         : {:.3e}
     Emittance x (mrad)      : {:.3e}
     Emittance y (mrad)      : {:.3e}
-    beta_x                  : {:.3e}
-    beta_y                  : {:.3e}\n\n""".format(x_rms*1e-3,y_rms*1e-3,Emittance_x*1e-3,Emittance_y*1e-3,Beta_x, Beta_y))
+    Beta x (mm)             : {:.3e}
+    Beta y (mm)             : {:.3e}\n\n""".format(x_rms*1e-3,y_rms*1e-3,Emittance_x*1e-3,Emittance_y*1e-3,Beta_x, Beta_y))
     time.sleep(2)
