@@ -15,13 +15,13 @@ Creating beam with parameters below:
     Particle Type           : electron
     Number of Particles     : 100000
     Beam Energy (KeV)       : 2.500e+02
-    sigma_x (mm)            : 3.000e-06
-    sigma_y (mm)            : 3.000e-06
-    sigma_z (mm)            : 1.000e-06
+    RMS x size (mm)         : 3.000e-06
+    RMS y size (mm)         : 3.000e-06
+    RMS z size (mm)         : 1.000e-06
     Emittance x (mrad)      : 7.200e-10
     Emittance y (mrad)      : 1.171e-09
-    alpha_x                 : 1.169e-16
-    alpha_y                 : -1.169e-16
+    Alpha x                 : 1.169e-16
+    Alpha y                 : -1.169e-16
     %Energy Spread          : 0.000e+00
 ```
 
@@ -213,11 +213,11 @@ getBeamPositions function prints an output with the final state beam parameters 
 ```
 Beam parameters in the final state:
         
-    sigma_x (mm)            : 2.870e-06
-    sigma_y (mm)            : 3.008e-06
+    RMS x size (mm)         : 2.870e-06
+    RMS y size (mm)         : 3.008e-06
     Emittance x (mrad)      : 7.208e-10
     Emittance y (mrad)      : 1.170e-09
-    beta_x                  : 1.143e+01
-    beta_y                  : 7.730e+00
+    Beta x (mm)             : 1.143e+01
+    Beta y (mm)             : 7.730e+00
 ```
 ____
