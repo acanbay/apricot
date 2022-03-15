@@ -1,6 +1,6 @@
 # APRICOT [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lcnby/apricot/HEAD)
 
->**Particle Tracking Module** for python
+>**Particle Tracking Module** for python - Ali Can Canbay
 
 APRICOT is a python module that simulates the behavior of particle beams in electromagnetic fields as they pass through various beamline elements and calculates beamline parameters at the end of the beamline.
 
@@ -8,7 +8,7 @@ The module needs **numpy** (vector analysis), **matplotlib** (visualization) and
 
 <br />
 
-*By clicking the **binder** button above, you can use APRICOT without any installation on your computer.*
+*By clicking the **"launch binder"** button above, you can use APRICOT without any installation on your computer (Tutorials created with jupyter in the examples directory can also be run with binder).*
 
 _____
 
