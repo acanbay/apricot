@@ -38,6 +38,11 @@ class ElectronGun():
         kB=8.617e-5 #eV*K^-1
         Emittance = self.r_Cathode * math.sqrt( kB * Temperature / self.Mass )
         self.Emittance = Emittance
+
+        self.z_rms=0
+        self.dE=0
+        self.Alpha_x = 0
+        self.Alpha_y = 0
         
     def GenerateBeam( self, NumberofParticles ):
         r = self.r_Cathode * np.random.random( NumberofParticles )
