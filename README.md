@@ -221,4 +221,6 @@ Beam parameters in the final state:
     Beta x (mm)             : 1.143e+01
     Beta y (mm)             : 7.730e+00
 ```
+
+By clicking the **binder** button at the beginning of this manual, you can use APRICOT without any installation on your computer.
 ____
