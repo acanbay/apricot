@@ -245,7 +245,7 @@ plotPhaseSpace(Beam)
 plotPositionGraph( Beam, beamline.Elements ):
 ```
 
-**Position Graph (RMS):** To look at the behavior of the RMS beam size in the beamline
+**Position Graph (RMS size):** To look at the behavior of the RMS beam size in the beamline
 ```py 
 plotPositionGraph_RMSsize( Beam, beamline.Elements ):
 ```
