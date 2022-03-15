@@ -2,9 +2,13 @@
 
 >**Particle Tracking Module** for python - Ali Can Canbay
 
-APRICOT is a python module that simulates the behavior of particle beams in electromagnetic fields as they pass through various beamline elements and calculates beamline parameters at the end of the beamline.
+APRICOT is a python3 module that simulates the behavior of particle beams in electromagnetic fields as they pass through various beamline elements and calculates beamline parameters at the end of the beamline.
 
-The module needs **numpy** (vector analysis), **matplotlib** (visualization) and **scipy** (small interval calculation) modules to work.
+The module needs **numpy** (vector analysis), **matplotlib** (visualization) and **scipy** (small interval calculation) modules to work. Compatible versions of required modules can be installed on your system with the following command:
+
+```
+pip install -r requirements.txt
+```
 
 <br />
 
