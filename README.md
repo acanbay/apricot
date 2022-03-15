@@ -6,6 +6,12 @@ APRICOT is a python module that simulates the behavior of particle beams in elec
 
 The module needs **numpy** (vector analysis), **matplotlib** (visualization) and **scipy** (small interval calculation) modules to work.
 
+<br />
+
+*By clicking the **binder** button above, you can use APRICOT without any installation on your computer.*
+
+_____
+
 ## 1. Beam Generation
 APRICOT has two different beam generation methods: random beam generator and electron gun beam generator.
 
@@ -170,7 +176,7 @@ Beamline(Name, DriftLength, QuadrupoleMagnetLength, QuadrupoleMagnetStrength)
 **If step size is used for FODO:** step size should be the exact divisor of half of the quadrupole magnet length and the drift tube length.
 
 ## 4. Outputs
-Outputs library is used for outputs. 
+Outputs module is used for outputs. 
 
 ### 4.1. Beam Graphs
 The beam graphs can be stored with the **getBeam** method (in **Outputs** module). getBeam needs the following parameters:
@@ -205,7 +211,6 @@ By using the getBeamPositions method as below, beam position and beta function g
 ```py
 getBeamPositions(Beam, beamline.Elements, path, tag)
 ```
-
 **Examples:**  7th example
 
 <img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BeamPosition.png" width="300"> <img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BeamPositionRMSsize.png" width="300">  <img src="https://github.com/lcnby/apricot/blob/main/output_samples/Final_BetaFunction.png" width="300">
@@ -221,6 +226,31 @@ Beam parameters in the final state:
     Beta x (mm)             : 1.143e+01
     Beta y (mm)             : 7.730e+00
 ```
-____
-By clicking the **binder** button at the beginning of this manual, you can use APRICOT without any installation on your computer.
+
+## 5. Plots
+The Graph module can be used if the graphs are to be viewed without saving them. Plots are displayed as follows:
+
+**Beam Graphs:** To look at Beam shape in the xy, yz and zx-axes.
+```py 
+plotBeamShape_xy(Beam)
+```
+
+**Phase Space:** 
+```py 
+plotPhaseSpace(Beam)
+```
+
+**Position Graph:** To look at the behavior of the beam size in the beamline
+```py 
+plotPositionGraph( Beam, beamline.Elements ):
+```
+
+**Position Graph (RMS):** To look at the behavior of the RMS beam size in the beamline
+```py 
+plotPositionGraph_RMSsize( Beam, beamline.Elements ):
+```
+**Beta Function:**
+```py 
+plotBetaFunctions( Beam, beamline.Elements ):
+```
 ____
