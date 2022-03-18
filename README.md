@@ -5,9 +5,26 @@
 APRICOT is a python3 module that simulates the behavior of particle beams in electromagnetic fields as they pass through various beamline elements and calculates beamline parameters at the end of the beamline.
 
 **Installing via pip:**
+
+APRICOT can be installed by running the following command in the console (all necessary modules will be installed automatically).
 ```console
 pip install apricotbl
 ```
+
+
+**Manual Installation:**
+
+APRICOT requires the **numpy**, **scipy**, and **matplotlib** modules. If these modules are not installed, you can install them with the following command: 
+```console
+pip install -r requirements.txt
+```
+*requirements.txt* is available on [APRICOT's github page](https://github.com/lcnby/apricot/).
+
+Then, download the [latest release](https://github.com/lcnby/apricot/releases/tag/apricotbl-0.1.0) and extract it. Enter the extracted file and run the following command via console:
+```console
+python setup.py install
+```
+
 
 <br />
 
@@ -18,7 +35,7 @@ _____
 ## 1. Beam Generation
 APRICOT has two different beam generation methods: random beam generator and electron gun beam generator.
 
-In both methods, before the beam generation, the information text of the parameters is printed on the terminal screen as follows.
+In both methods, before the beam generation, the information text of the parameters is printed on the console screen as follows.
 ```
 Creating beam with parameters below:
         
