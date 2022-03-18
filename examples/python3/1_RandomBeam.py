@@ -1,5 +1,5 @@
-import apricot.Outputs as out
-import apricot.Functions as fn
+import apricotbl.Outputs as out
+import apricotbl.Functions as fn
 
 ParticleTpye = "electron"   # particle type
 NumberOfParticles = 10000   # Number of particles
