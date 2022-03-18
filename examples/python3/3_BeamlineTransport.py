@@ -1,7 +1,7 @@
-import apricot.BeamlineComponents as blc
-import apricot.Beamline as bl
-import apricot.Functions as fn
-import apricot.Outputs as out
+import apricotbl.BeamlineComponents as blc
+import apricotbl.Beamline as bl
+import apricotbl.Functions as fn
+import apricotbl.Outputs as out
 
 ParticleTpye = "electron"   # particle type
 NumberOfParticles = 10000   # number of particle
