@@ -1,5 +1,5 @@
-import apricot.Gun as gun
-import apricot.outputs as out
+import apricotbl.Gun as gun
+import apricotbl.outputs as out
 
 NumberOfParticles = 10000   # Number of particles
 r_Cathode = 0.05            # Cathode radius (m)
