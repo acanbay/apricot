@@ -6,8 +6,8 @@ NumberOfParticles = 10000   # Number of particles
 BeamEnergy = 250e3          # beam energy (keV)
 x_rms = 0.003               # RMS beam size of x (m)  
 y_rms = 0.003               # RMS beam size of y (m) 
-Emittance_x = 1e-6          # emittance x (mrad)
-Emittance_y = 1e-6          # emittance y (mrad)
+Emittance_x = 1e-6          # emittance x (m.rad)
+Emittance_y = 1e-6          # emittance y (m.rad)
 Alpha_x = -0.50             # alpha x
 Alpha_y = -0.50             # alpha y
 
