@@ -72,8 +72,8 @@ class ElectronGun():
         RMS x size (mm)         : {:.3e}
         RMS y size (mm)         : {:.3e}
         RMS z size (mm)         : {:.3e}
-        Emittance x (mrad)      : {:.3e}
-        Emittance y (mrad)      : {:.3e}
+        Emittance x (m.rad)     : {:.3e}
+        Emittance y (m.rad)     : {:.3e}
         Alpha x                 : {:.3e}
         Alpha y                 : {:.3e}
         %Energy Spread          : {}\n""".format("electron",NumberofParticles,self.Voltage*1e-3,x_rms*1e-3,y_rms*1e-3,self.z_rms*1e-3,self.Emittance*1e-3,self.Emittance*1e-3,self.Alpha_x, self.Alpha_y,self.dE))
