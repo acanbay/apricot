@@ -1,4 +1,5 @@
-# APRICOT [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lcnby/apricot/HEAD)
+# APRICOT [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/acanbay/apricot/HEAD)
+
 
 >**Particle Tracking Module** for python - Ali Can Canbay
 
