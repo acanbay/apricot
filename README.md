@@ -46,8 +46,8 @@ Creating beam with parameters below:
     RMS x size (mm)         : 3.000e-06
     RMS y size (mm)         : 3.000e-06
     RMS z size (mm)         : 1.000e-06
-    Emittance x (mm-mrad)   : 7.200e-10
-    Emittance y (mm-mrad)   : 1.171e-09
+    Emittance x (m.rad)     : 7.200e-10
+    Emittance y (m.rad)     : 1.171e-09
     Alpha x                 : 1.169e-16
     Alpha y                 : -1.169e-16
     %Energy Spread          : 0.000e+00
@@ -63,8 +63,8 @@ BeamEnergy          # Beam energy (keV)
 x_rms               # RMS beam size of x (m)  
 y_rms               # RMS beam size of y (m) 
 z_rms               # RMS beam size of y (m) (not mandatory)
-Emittance_x         # Emittance x (mm-mrad)
-Emittance_y         # Emittance y (mm-mrad)
+Emittance_x         # Emittance x (m.rad)
+Emittance_y         # Emittance y (m.rad)
 Alpha_x             # Alpha x
 Alpha_y             # Alpha y
 dE                  # Energy Spread (not mandatory)
@@ -242,8 +242,8 @@ Beam parameters in the final state:
         
     RMS x size (mm)         : 2.870e-06
     RMS y size (mm)         : 3.008e-06
-    Emittance x (mm-mrad)   : 7.208e-10
-    Emittance y (mm-mrad)   : 1.170e-09
+    Emittance x (m.rad)     : 7.208e-10
+    Emittance y (m.rad)     : 1.170e-09
     Beta x (mm)             : 1.143e+01
     Beta y (mm)             : 7.730e+00
 ```
