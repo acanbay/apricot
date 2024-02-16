@@ -56,8 +56,8 @@ def getBeamPositions( beam, beamline=None, path=None, tag=None ):
         
     RMS x size (mm)         : {:.3e}
     RMS y size (mm)         : {:.3e}
-    Emittance x (mrad)      : {:.3e}
-    Emittance y (mrad)      : {:.3e}
+    Emittance x (mm-mrad)   : {:.3e}
+    Emittance y (mm-mrad)   : {:.3e}
     Beta x (mm)             : {:.3e}
     Beta y (mm)             : {:.3e}\n\n""".format(x_rms*1e-3,y_rms*1e-3,Emittance_x*1e-3,Emittance_y*1e-3,Beta_x, Beta_y))
     time.sleep(2)
