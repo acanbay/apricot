@@ -46,8 +46,8 @@ Creating beam with parameters below:
     RMS x size (mm)         : 3.000e-06
     RMS y size (mm)         : 3.000e-06
     RMS z size (mm)         : 1.000e-06
-    Emittance x (mrad)      : 7.200e-10
-    Emittance y (mrad)      : 1.171e-09
+    Emittance x (mm-mrad)   : 7.200e-10
+    Emittance y (mm-mrad)   : 1.171e-09
     Alpha x                 : 1.169e-16
     Alpha y                 : -1.169e-16
     %Energy Spread          : 0.000e+00
@@ -63,8 +63,8 @@ BeamEnergy          # Beam energy (keV)
 x_rms               # RMS beam size of x (m)  
 y_rms               # RMS beam size of y (m) 
 z_rms               # RMS beam size of y (m) (not mandatory)
-Emittance_x         # Emittance x (mrad)
-Emittance_y         # Emittance y (mrad)
+Emittance_x         # Emittance x (mm-mrad)
+Emittance_y         # Emittance y (mm-mrad)
 Alpha_x             # Alpha x
 Alpha_y             # Alpha y
 dE                  # Energy Spread (not mandatory)
@@ -192,7 +192,7 @@ QuadrupoleMagnetStrength  # Strength of the quadrupole magnets
 
 The FODO object is generated from the **FODO** class of the **BeamLine** module as follows:
 ```py
-Beamline(Name, DriftLength, QuadrupoleMagnetLength, QuadrupoleMagnetStrength)
+FODO(Name, DriftLength, QuadrupoleMagnetLength, QuadrupoleMagnetStrength)
 ```
 **If step size is used for FODO:** step size should be the exact divisor of half of the quadrupole magnet length and the drift tube length.
 
@@ -242,8 +242,8 @@ Beam parameters in the final state:
         
     RMS x size (mm)         : 2.870e-06
     RMS y size (mm)         : 3.008e-06
-    Emittance x (mrad)      : 7.208e-10
-    Emittance y (mrad)      : 1.170e-09
+    Emittance x (mm-mrad)   : 7.208e-10
+    Emittance y (mm-mrad)   : 1.170e-09
     Beta x (mm)             : 1.143e+01
     Beta y (mm)             : 7.730e+00
 ```
