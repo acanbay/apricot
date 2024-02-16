@@ -46,8 +46,8 @@ def RandomBeam( ParticleTpye, NumberOfParticles, BeamEnergy, x_rms, y_rms, Emitt
     RMS x size (mm)         : {:.3e}
     RMS y size (mm)         : {:.3e}
     RMS z size (mm)         : {:.3e}
-    Emittance x (mm-mrad)   : {:.3e}
-    Emittance y (mm-mrad)   : {:.3e}
+    Emittance x (m.rad)     : {:.3e}
+    Emittance y (m.rad)     : {:.3e}
     Alpha x                 : {:.3e}
     Alpha y                 : {:.3e}
     %Energy Spread          : {:.3e}\n""".format(ParticleTpye,NumberOfParticles,BeamEnergy*1e-3,x_rms*1e-3,y_rms*1e-3,z_rms*1e-3,Emittance_x*1e-3,Emittance_y*1e-3,Alpha_x, Alpha_y,dE))
