@@ -57,7 +57,7 @@ Creating beam with parameters below:
 Random beam generation is provided by the **RandomBeam** method in the **Functions** module. Here is the usage of the parameters required by the RandomBeam (in **Outputs** module):
 
 ```py
-ParticleTpye        # 'electron', 'proton' or 'muon'
+ParticleType        # 'electron', 'proton' or 'muon'
 NumberOfParticles   # Number of particles
 BeamEnergy          # Beam energy (keV)
 x_rms               # RMS beam size of x (m)  
@@ -71,7 +71,7 @@ dE                  # Energy Spread (not mandatory)
 ```
 After these parameters are determined, random beam generation is provided as follows. 
 ```py 
-RandomBeam(ParticleTpye, NumberOfParticles, BeamEnergy, x_rms, y_rms, Emittance_x, Emittance_y, Alpha_x, Alpha_y, z_rms, dE)
+RandomBeam(ParticleType, NumberOfParticles, BeamEnergy, x_rms, y_rms, Emittance_x, Emittance_y, Alpha_x, Alpha_y, z_rms, dE)
 ```
 
 The function will return the generated beam object as return value.
