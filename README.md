@@ -21,7 +21,7 @@ pip install -r requirements.txt
 ```
 *requirements.txt* is available on [APRICOT's github page](https://github.com/lcnby/apricot/).
 
-Then, download the [latest release](https://github.com/lcnby/apricot/releases/tag/apricotbl-0.1.0) and extract it. Enter the extracted file and run the following command via console:
+Then, download the [latest release](https://github.com/acanbay/apricot/releases/tag/apricotbl-0.1.0) and extract it. Enter the extracted file and run the following command via console:
 ```console
 python setup.py install
 ```
