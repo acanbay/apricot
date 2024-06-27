@@ -1,7 +1,11 @@
-# APRICOT [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/acanbay/apricot/HEAD)
-
+# APRICOT 
 
 >**Particle Tracking Module** for python - Ali Can Canbay
+
+[![DOI](https://zenodo.org/badge/466849344.svg)](https://zenodo.org/doi/10.5281/zenodo.12569327)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/acanbay/apricot/HEAD)
+
+<br>
 
 APRICOT is a python3 module that simulates the behavior of particle beams in electromagnetic fields as they pass through various beamline elements and calculates beamline parameters at the end of the beamline.
 
