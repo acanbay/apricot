@@ -1,6 +1,6 @@
 # APRICOT 
 
->**Particle Tracking Module** for python - Ali Can Canbay
+>**Particle Tracking Module** for Python - Ali Can Canbay
 
 [![DOI](https://zenodo.org/badge/466849344.svg)](https://zenodo.org/doi/10.5281/zenodo.12569327)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/acanbay/apricot/HEAD)
