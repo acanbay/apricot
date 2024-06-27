@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: 'APRICOT'
+title: 'APRICOT: Particle Tracking Module for Python'
 version: 0.1.0
 abstract: APRICOT is a python3 module that simulates the behavior of particle beams in electromagnetic fields as they pass through various beamline elements and calculates beamline parameters at the end of the beamline.
 message: If you use this software, please cite it using these metadata.
