@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: 'APRICOT'
+version: 0.1.0
+abstract: APRICOT is a python3 module that simulates the behavior of particle beams in electromagnetic fields as they pass through various beamline elements and calculates beamline parameters at the end of the beamline.
+message: If you use this software, please cite it using these metadata.
+authors:
+- family-names: Canbay
+  given-names: Ali Can
+  orcid: "https://orcid.org/0000-0003-4602-473X"
+date-released: '2024-27-06'
+doi: 10.5281/zenodo.12569328
+license: GPL-3.0-only
+type: software
+identifiers:
+  - description: Zenodo release
+    type: doi
+    value: "10.5281/zenodo.12569328"
