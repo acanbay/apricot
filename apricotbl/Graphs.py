@@ -373,9 +373,9 @@ def confidence_ellipse( x, y, ax, n_std = 2.7, facecolor = 'none', **kwargs ):
     return ax.add_patch( ellipse )
 
 def plotPositionGraph( Beam, beamline ):
-    x =  Beam.BeamPositions[:,0]* 1e3
-    y =  Beam.BeamPositions[:,1]* 1e3
-    z =  Beam.BeamPositions[:,2]        
+    x = Beam.BeamPositions[:,0]* 1e3
+    y = Beam.BeamPositions[:,1]* 1e3
+    z = Beam.BeamPositions[:,2]        
     
     x_max = np.max( x, 1 )
     x_min = np.min( x, 1 )
@@ -460,9 +460,9 @@ def PositionGraph( Beam, beamline, path=None, tag=None ):
     if path==None:
         path="."
 
-    x =  Beam.BeamPositions[:,0]* 1e3
-    y =  Beam.BeamPositions[:,1]* 1e3
-    z =  Beam.BeamPositions[:,2]        
+    x = Beam.BeamPositions[:,0]* 1e3
+    y = Beam.BeamPositions[:,1]* 1e3
+    z = Beam.BeamPositions[:,2]        
     
     x_max = np.max( x, 1 )
     x_min = np.min( x, 1 )
@@ -549,9 +549,9 @@ def PositionGraph( Beam, beamline, path=None, tag=None ):
     plt.close()
 
 def plotPositionGraph_RMSsize( Beam, beamline ):
-    x =  Beam.BeamPositions[:,0]* 1e3
-    y =  Beam.BeamPositions[:,1]* 1e3
-    z =  Beam.BeamPositions[:,2]
+    x = Beam.BeamPositions[:,0]* 1e3
+    y = Beam.BeamPositions[:,1]* 1e3
+    z = Beam.BeamPositions[:,2]
 
     x_rms = []
     y_rms = []
@@ -637,9 +637,9 @@ def PositionGraph_RMSsize( Beam, beamline, path=None, tag=None ):
     if path==None:
         path="."
 
-    x =  Beam.BeamPositions[:,0]* 1e3
-    y =  Beam.BeamPositions[:,1]* 1e3
-    z =  Beam.BeamPositions[:,2]
+    x = Beam.BeamPositions[:,0]* 1e3
+    y = Beam.BeamPositions[:,1]* 1e3
+    z = Beam.BeamPositions[:,2]
 
     x_rms = []
     y_rms = []
@@ -729,7 +729,7 @@ def PositionGraph_RMSsize( Beam, beamline, path=None, tag=None ):
 def plotBetaFunctions( Beam, beamline ):        
     Beta_x = np.sqrt( Beam.TwissParameters[:,1] )
     Beta_y = np.sqrt( Beam.TwissParameters[:,3] )
-    mean_z =  np.mean(Beam.BeamPositions[:,2],1)
+    mean_z = np.mean(Beam.BeamPositions[:,2],1)
     
     z_max=0
     for component in beamline:
@@ -806,7 +806,7 @@ def BetaFunctions( Beam, beamline, path=None, tag=None ):
         
     Beta_x = np.sqrt( Beam.TwissParameters[:,1] )
     Beta_y = np.sqrt( Beam.TwissParameters[:,3] )
-    mean_z =  np.mean(Beam.BeamPositions[:,2],1)
+    mean_z = np.mean(Beam.BeamPositions[:,2],1)
     
     z_max=0
     for component in beamline:
