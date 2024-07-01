@@ -4,6 +4,7 @@
 
 [![DOI](https://zenodo.org/badge/466849344.svg)](https://zenodo.org/doi/10.5281/zenodo.12569327)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/acanbay/apricot/HEAD)
+[![CodeFactor](https://www.codefactor.io/repository/github/acanbay/modifiedga/badge)](https://www.codefactor.io/repository/github/acanbay/modifiedga)
 
 <br>
 
