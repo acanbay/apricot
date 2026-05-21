@@ -2,7 +2,7 @@
 
 >**Particle Tracking Module** for Python - Ali Can Canbay
 
-[![DOI](https://zenodo.org/badge/466849344.svg)](https://zenodo.org/doi/10.5281/zenodo.12569327)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12569328.svg)](https://zenodo.org/doi/10.5281/zenodo.12569328) 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/acanbay/apricot/HEAD)
 
 <br>
